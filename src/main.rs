@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 
-#[derive(Copy, Clone, Eq, PartialEq, Hash)]
+#[derive(Copy, Clone, Eq, PartialEq, Hash, Debug)]
 enum Faction {
     Dark,
     Meteor,
@@ -700,8 +700,7 @@ fn build_bosses() -> Vec<Boss>
     return bosses;
 }
 
-
-fn main() {
+fn print_hero_boss_frequency() {
     let heroes = build_heroes();
     let bosses = build_bosses();
 
@@ -721,5 +720,63 @@ fn main() {
 
         println!("{} - {} ", faction_count, hero.name);
     }
+}
+
+fn count_heroes_in_this_group(faction_group : HashSet<Faction>) -> u32
+{
+    let heroes = build_heroes();
+
+    let mut hero_count = 0;
     
+    for hero in heroes.iter()
+    {
+        // Do the sets intersect?
+        let intersection: HashSet<_> = hero.factions.intersection(&faction_group).collect();
+        if !intersection.is_empty()
+        {
+            hero_count = hero_count + 1;
+        }
+    }
+
+    return hero_count;
+}
+
+
+fn print_faction_overlap_frequency() {
+
+    let heroes = build_heroes();
+
+    // Select two factions
+    // Is hero in eiether faction?
+    // Print number of people in either faction
+
+    // Build list of factions
+
+    let factions = vec![Faction::Dark, Faction::Meteor, Faction::Mythical, Faction::Princess, Faction::Yeless,
+                        Faction::Origins, Faction::Glory, Faction::Protag, Faction::Rebirth, Faction::Strategic,
+                        Faction::Empire, Faction::Time ];
+
+    // All faction groups
+    for i in 0..factions.len()
+    {
+        for j in i + 1..factions.len()
+        {
+            let mut faction_group =  HashSet::new();
+            faction_group.insert(factions[i]);
+            faction_group.insert(factions[j]);
+           
+            // Count heroes in these two groups
+            let hero_count = count_heroes_in_this_group(faction_group);
+
+            println!("{:?} {:?}-{:?}", hero_count, factions[i], factions[j]);
+
+        }
+    }
+   
+}
+
+
+fn main() {
+//     print_hero_boss_frequency();
+    print_faction_overlap_frequency();
 }
