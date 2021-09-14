@@ -34,11 +34,6 @@ fn build_heroes() -> Vec<Hero>
     let mut heroes = Vec::new();
 
     heroes.push(Hero {
-        name: "Shaltear".to_string(),
-        factions : [Faction::Dark, Faction::Meteor, Faction::Time].iter().cloned().collect(),
-    });
-
-    heroes.push(Hero {
         name: "Ainz".to_string(),
         factions : [Faction::Rebirth, Faction::Dark, Faction::Time].iter().cloned().collect(),
     });
