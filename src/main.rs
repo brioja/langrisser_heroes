@@ -884,8 +884,33 @@ fn print_faction_overlap_frequency() {
    
 }
 
+// How many other heroes are in the same faction as this hero
+fn print_hero_overlap_count() {
+
+    let heroes = build_heroes();
+
+    for current_hero in heroes.iter()
+    {
+        let mut hero_count = 0;
+        
+        for other_hero in heroes.iter()
+        {
+            // Do the sets intersect?
+            let intersection: HashSet<_> = current_hero.factions.intersection(&other_hero.factions).collect();
+            if !intersection.is_empty()
+            {
+                hero_count = hero_count + 1;
+            }
+        }
+
+        println!("{:?} {:?}", hero_count, current_hero.name);
+    }
+}
+
+
 
 fn main() {
 //     print_hero_boss_frequency();
     print_faction_overlap_frequency();
+    // print_hero_overlap_count();
 }
