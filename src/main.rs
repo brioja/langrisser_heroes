@@ -34,6 +34,11 @@ fn build_heroes() -> Vec<Hero>
     let mut heroes = Vec::new();
 
     heroes.push(Hero {
+        name: "Adankelmo".to_string(),
+        factions : [Faction::Strategic, Faction::Yeless, Faction::Mythical].iter().cloned().collect(),
+    });
+
+    heroes.push(Hero {
         name: "Ainz".to_string(),
         factions : [Faction::Rebirth, Faction::Dark, Faction::Time].iter().cloned().collect(),
     });
@@ -87,15 +92,15 @@ fn build_heroes() -> Vec<Hero>
         name: "Arianrhod".to_string(),
         factions : [Faction::Rebirth, Faction::Mythical, Faction::Time].iter().cloned().collect(),
     });
-
+    
+    heroes.push(Hero {
+        name: "Ashumar".to_string(),
+        factions : [Faction::Origins, Faction::Princess, Faction::Mythical].iter().cloned().collect(),
+    });
+    
     heroes.push(Hero {
         name: "Ashram".to_string(),
         factions : [Faction::Dark, Faction::Strategic, Faction::Time].iter().cloned().collect(),
-    });
-
-    heroes.push(Hero {
-        name: "Ashumere".to_string(),
-        factions : [Faction::Origins, Faction::Princess, Faction::Mythical].iter().cloned().collect(),
     });
 
     heroes.push(Hero {
@@ -213,6 +218,11 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Protag, Faction::Yeless, Faction::Time].iter().cloned().collect(),
     });
 
+     heroes.push(Hero {
+        name: "Girl in the Shell".to_string(),
+        factions : [Faction::Princess, Faction::Dark, Faction::Rebirth].iter().cloned().collect(),
+    });
+
     heroes.push(Hero {
         name: "Gizarof".to_string(),
         factions : [Faction::Dark, Faction::Mythical].iter().cloned().collect(),
@@ -223,6 +233,11 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Glory].iter().cloned().collect(),
     });    
 
+    heroes.push(Hero {
+        name: "Grenshiel".to_string(),
+        factions : [Faction::Origins, Faction::Princess, Faction::Strategic].iter().cloned().collect(),
+    });    
+    
     heroes.push(Hero {
         name: "Gustaf".to_string(),
         factions : [Faction::Dark, Faction::Mythical, Faction::Rebirth].iter().cloned().collect(),
@@ -258,6 +273,11 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Empire, Faction::Strategic, Faction::Yeless].iter().cloned().collect(),
     });
 
+    heroes.push(Hero {
+        name: "Joa & Conny".to_string(),
+        factions : [Faction::Empire, Faction::Strategic, Faction::Rebirth].iter().cloned().collect(),
+    });
+    
     heroes.push(Hero {
         name: "Joshua".to_string(),
         factions : [Faction::Time, Faction::Meteor, Faction::Princess].iter().cloned().collect(),
@@ -334,6 +354,11 @@ fn build_heroes() -> Vec<Hero>
     });
 
     heroes.push(Hero {
+        name: "Leo Beck".to_string(),
+        factions : [Faction::Empire, Faction::Dark, Faction::Mythical].iter().cloned().collect(),
+    });
+
+    heroes.push(Hero {
         name: "Leon".to_string(),
         factions : [Faction::Empire, Faction::Strategic].iter().cloned().collect(),
     });
@@ -359,6 +384,11 @@ fn build_heroes() -> Vec<Hero>
     });
 
     heroes.push(Hero {
+        name: "Lightbringer".to_string(),
+        factions : [Faction::Protag, Faction::Glory, Faction::Mythical].iter().cloned().collect(),
+    });
+    
+    heroes.push(Hero {
         name: "Listell".to_string(),
         factions : [Faction::Dark, Faction::Yeless].iter().cloned().collect(),
     });
@@ -368,6 +398,11 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Empire, Faction::Princess, Faction::Rebirth].iter().cloned().collect(),
     });
 
+    heroes.push(Hero {
+        name: "Lugner".to_string(),
+        factions : [Faction::Glory, Faction::Strategic, Faction::Rebirth].iter().cloned().collect(),
+    });
+    
     heroes.push(Hero {
         name: "Luna".to_string(),
         factions : [Faction::Origins, Faction::Princess, Faction::Strategic].iter().cloned().collect(),
@@ -428,6 +463,11 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Protag, Faction::Yeless].iter().cloned().collect(),
     });
 
+    heroes.push(Hero {
+        name: "Polyal".to_string(),
+        factions : [Faction::Dark, Faction::Yeless, Faction::Rebirth].iter().cloned().collect(),
+    });
+   
     heroes.push(Hero {
         name: "Rainforce".to_string(),
         factions : [Faction::Strategic, Faction::Yeless, Faction::Mythical].iter().cloned().collect(),
@@ -528,6 +568,16 @@ fn build_heroes() -> Vec<Hero>
         factions : [Faction::Rebirth, Faction::Meteor].iter().cloned().collect(),
     });
 
+    heroes.push(Hero {
+        name: "Sword of Light and Shadow".to_string(),
+        factions : [Faction::Protag, Faction::Mythical, Faction::Rebirth].iter().cloned().collect(),
+    });
+
+    heroes.push(Hero {
+        name: "Theon".to_string(),
+        factions : [Faction::Origins, Faction::Strategic, Faction::Meteor].iter().cloned().collect(),
+    });
+    
     heroes.push(Hero {
         name: "Tiaris".to_string(),
         factions : [Faction::Protag, Faction::Origins, Faction::Princess].iter().cloned().collect(),
