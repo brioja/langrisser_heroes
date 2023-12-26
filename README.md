@@ -1,1 +1,0 @@
-# langrisser_heroes
